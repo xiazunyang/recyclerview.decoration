@@ -1,12 +1,14 @@
 # RecyclerView
 # 当前最新版本号：[![](https://jitpack.io/v/cn.numeron/recyclerview.decoration.svg)](https://jitpack.io/#cn.numeron/recyclerview.decoration)
 
-### decoration
-
-#### SpaceItemDecoration
+### SpaceItemDecoration
 * 使每个Item之间的距离保持指定的间距
-
-#### StickyItemDecoration
+* 使用方法：
+1. 创建实例、指定间距并添加到RecyclerView即可。
+```
+recyclerView.addItemDecoration(SpaceItemDecoration(8.dp))
+```
+### StickyItemDecoration
 * 在指定的Item顶部添加跟随Item滚动的悬浮视图。
 * 使用方法：
 1. 在RecyclerView.Adapter的实现类上实现StickySupport接口。
@@ -37,7 +39,7 @@ class ItemAdapter : PagingBindingAdapter<NumberItem, NumberItemBindingHolder, Nu
 recyclerView.addItemDecoration(StickyItemDecoration())
 ```
 
-![image](/preview.gif)
+![image](https://raw.githubusercontent.com/xiazunyang/recyclerview.decoration/main/preview.gif)
 ### 引入
 1.  在你的android工程的根目录下的build.gradle文件中的适当的位置添加以下代码：
 ```
